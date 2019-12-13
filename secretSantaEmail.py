@@ -12,7 +12,7 @@ server.login(email_address, password)
 
 #open participant emails text file and parse data
 #each line goes "first_name last_name,emailaddress@email.com"
-fp = open('.\emails.txt')
+fp = open('./emails.txt')
 
 participants = [[], []]
 
@@ -40,7 +40,7 @@ while(True):
 #matches up each participant with assignment and sends mail.
 for i in range(0, len(participants[0])):
 	
-	msg = participants[0][i] + ", your secret santa assignment is " + participants[0][assignments[i]] + "\n\nbtw guys lets set some grounds rules\nrule 1: no books\nrule 2: that'll be all"
+	msg = participants[0][i] + ", your secret santa assignment is " + participants[0][assignments[i]] + "\n\nbtw guys same ground rules, yeah?\nrule 1: no books\nrule 2: that's it\n\n\nALSO IF YOU GET THIS EMAIL PLS TEXT IN THE GC THAT YOU GOT IT SO I DON'T HAVE TO INDIVIDUALLY MAKE SURE Y'ALL GOT AN ASSIGNMENT k ty"
 	server.sendmail(email_address, participants[1][i], msg)
 	
 server.quit()
